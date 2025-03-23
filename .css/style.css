@@ -18,7 +18,7 @@ main {
     height: 600px;
     border-radius: 50%;
     border: 8px dashed #333;
-    position: relative;
+    position: absolute;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,15 +27,47 @@ main {
 .second-hand {
     position: absolute;
     display: flex;
-    justify-content: flex-end; /* Alinha os números à direita */
+    flex-direction: column; /* Mantém os números empilhados na vertical */
+    justify-content: flex-start; /* Começa do topo */
     align-items: center;
     font-size: 18px;
     font-weight: bold;
     pointer-events: none;
     white-space: nowrap;
-    transform: translateY(0%) translateX(50%);
-    transform-origin: 50% 100%;
+    left: 50%; /* Move para o centro horizontal */
+    top: 50%; /* Move para o centro vertical */
+    transform-origin: center left; 
     color: brown;
+}
+.minute-hand {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Mantém os números empilhados na vertical */
+    justify-content: flex-start; /* Começa do topo */
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    pointer-events: none;
+    white-space: nowrap;
+    left: 50%; /* Move para o centro horizontal */
+    top: 50%; /* Move para o centro vertical */
+    transform-origin: center left; 
+    color: blue;
+}
+.hour-hand {
+    position: absolute;
+    display: flex;
+    flex-direction: column; /* Mantém os números empilhados na vertical */
+    justify-content: flex-start; /* Começa do topo */
+    align-items: center;
+    font-size: 18px;
+    font-weight: bold;
+    pointer-events: none;
+    white-space: nowrap;
+    left: 50%; /* Move para o centro horizontal */
+    top: 50%; /* Move para o centro vertical */
+    transform-origin: center left; 
+    color: green;
 }
 
 .center {
